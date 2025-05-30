@@ -23,7 +23,7 @@ function M.getJestCommand(path)
 
     -- If no binary found and the current directory isn't the parent
     -- git ancestor, let's traverse up the tree again
-    if rootPath ~= nil and rootPath ~= gitAncestor then
+    if rootPath ~= gitAncestor then
       return findBinary(util.path.dirname(rootPath))
     end
   end
