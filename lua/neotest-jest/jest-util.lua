@@ -13,6 +13,7 @@ function M.getJestCommand(path)
   local gitAncestor = util.find_git_ancestor(path)
 
   local function findBinary(p)
+    print(p)
     local rootPath = util.find_node_modules_ancestor(p)
     local jestBinary = util.path.join(rootPath, "node_modules", ".bin", "jest")
 
